@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index page</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>All chats :- </h1>
+    <form method="GET" action="/chats/new">
+        <button>New Chat</button>
+    </form><br><br>
+   <% chats.forEach((chat) => { %>
+        <div class="chat">
+            <p> From: <i><%= chat.from %></i></p>
+            <div class="msg">
+                <p> Message : <%= chat.message %></p>
+                <form method="GET" action="/chats/<%= chat._id %>/edit">
+                    <button>Edit</button>
+                </form>
+                <form  method="POST" action="/chats/<%= chat._id %>?_method=DELETE">
+                    <button id="deletebtn">Delete</button>
+                </form>
+                <div class="confirm">
+                    <span class="yes">Yes</span>
+                    <span class="no">No</span>
+                </div>
+            </div>
+            
+            <p>Received by : <i><%= chat.to %></i></p>
+            <p><%= chat.create_at.toString().split(" ")[4] %></p>
+            <p><%= chat.create_at.toString().split(" ").splice(0, 4).join(" ") %></p>
+        </div>
+            
+            
+         
+            <hr>
+        
+  <%  }) %>
+
+  <script src="/app.js"></script>
+</body>
+</html>

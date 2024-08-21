@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>facebook user DB</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1>Facebook Users Details :</h1>
+
+    <ul>
+        <%  users.forEach((user) => { %>
+
+        <li><%=user.name %> - <%=user.email %> - <%= user.birthdate %> - <%= user.gender %></li>
+
+        <% }) %>
+    </ul>
+
+ 
+</body>
+</html>

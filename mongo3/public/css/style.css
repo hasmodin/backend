@@ -1,0 +1,44 @@
+.chat {
+    background-color: cadetblue;
+    padding: 1rem;
+    border-radius: 2rem;
+    display: inline-block;
+   
+}
+
+.msg {
+    background-color: darkblue;
+    color: white;
+    padding: 0.5rem 1rem ;
+    border-radius: 1rem;
+}
+
+h4 {
+ font-style: italic;
+}
+
+.confirm {
+    position: relative;
+    width: 500px;
+    height: 50px;
+    cursor: pointer;
+    background-color:black;
+    color: white;
+    
+    display: none;
+
+}
+
+.no {
+    position: absolute;
+   left: 200px;
+   background-color: green;
+   
+}
+
+.yes {
+   
+   
+  
+   background-color: red;
+}
